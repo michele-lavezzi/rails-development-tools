@@ -1,4 +1,5 @@
-require "rails_development_tools/engine"
+require 'rails_development_tools/engine'
+require 'deface'
 
 module RailsDevelopmentTools
   extend ActiveSupport::Concern
