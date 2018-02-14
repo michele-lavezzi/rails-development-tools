@@ -1,0 +1,156 @@
+<div class="development-tools"></div>
+<div class="development-tools-message"></div>
+<div class="development-tools-panel">
+  <div>Development Tools</div>
+  <div><label for="partials_checkbox">Partials</label>
+    <input id="partials_checkbox" type="checkbox">
+    <input id="routing_checkbox" type="checkbox">
+    <label for="routing_checkbox">Routing</label>
+  </div>
+</div>
+
+<% content_for :js do %>
+  <%= javascript_include_tag 'rails_development_tools/rails_development_tools_status' %>
+  <%= javascript_include_tag 'rails_development_tools/rails_development_tools' %>
+
+<% end %>
+
+<!-- style for panel -->
+<style>
+  .development-tools-panel {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border: 1px solid #333;
+    border-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px #888;
+  }
+
+  .development-tools-panel div {
+    padding: 5px 10px;
+  }
+
+  .development-tools-panel div:first-child {
+    color: white;
+    background-color: #333;
+    text-align: center;
+  }
+</style>
+
+<!-- style for routing info -->
+<style>
+  div.development-tools table {
+    margin: 5px;
+  }
+
+  div.development-tools #title {
+    background-color: #333;
+    color: white;
+    padding: 4px 0;
+    text-align: center;
+  }
+
+  div.development-tools td.value {
+    text-align: center;
+    padding-left: 5px;
+  }
+
+  div.development-tools span.value {
+    font-size: 16px;
+    color: #333;
+    padding: 0 5px;
+    display: inline;
+  }
+
+  div.development-tools td.label {
+    text-align: right;
+  }
+
+  div.development-tools span.label {
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 5px;
+  }
+
+  div.development-tools {
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    left: 100%;
+    transform: translateX(-100%);
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 100);
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #ccc;
+    box-shadow: 5px 5px 10px #888;
+  }
+</style>
+
+<!-- style for partials -->
+<style>
+  div#partials-container #title {
+    background-color: #333;
+    color: white;
+
+    border-top-right-radius: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  div#partials-container .single-partial {
+    left: 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    padding: 3px;
+    padding-left: 10px;
+    z-index: 1000;
+  }
+
+  .single-partial.single-selected,
+  .single-circle.single-selected {
+    background-color: #333;
+    color: #fff;
+  }
+
+  div#partials-container {
+    top: 40%;
+    transform: translateY(-40%);
+    background-color: rgba(255, 255, 255, 100);
+    border: 1px solid #333;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 999;
+
+    padding-bottom: 15px;
+
+    box-shadow: 5px 5px 10px #888;
+    width: 190px;
+
+    line-height: 1.3em;
+  }
+
+  div.single-circle {
+    border-radius: 15px;
+    position: absolute;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    padding-top: 11px;
+    box-shadow: 5px 5px 10px #888;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0;
+  }
+</style>

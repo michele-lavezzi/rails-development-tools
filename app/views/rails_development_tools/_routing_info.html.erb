@@ -1,0 +1,15 @@
+<div id="title">Routing info</div>
+<table>
+  <tr>
+    <td class='label'><span class='label'>controller</span></td>
+    <td class='value'><span class='value'><%= controller_name %></span></td>
+  </tr>
+  <tr>
+    <td class='label'><span class='label'>action</span></td>
+    <td class='value'><span class='value'><%= action_name %></span></td>
+  </tr>
+  <tr>
+    <td class='label'><span class='label'>layout</span></td>
+    <td class='value'><span class='value'><%= controller.send('_layout', '') %></span></td>
+  </tr>
+</table>

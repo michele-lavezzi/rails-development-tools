@@ -1,0 +1,59 @@
+<% messages = RailsDevelopmentTools::Screen.logger.messages %>
+
+<% if messages.any? %>
+    <div id="development-tools-title">Messaggi Debug</div>
+    <% messages.each_with_index do |message, i| %>
+       <% css_class = i.odd? ? 'odd' :'' %>
+
+       <div class='message <%= css_class %>'>
+         <div class='single' title='<%=message %>'>
+           <b><%=i+1 %>.</b> <%= truncate message.squish, :length => 60, :separator => /\w/, :omission => "..." %>
+         </div>
+       </div>
+    <% end %>
+
+    <style>
+      div.development-tools-message{
+        overflow-y: auto;
+        max-height: 70%;
+      }
+
+      div.development-tools-message #development-tools-title {
+        background-color: #333;
+        color:white;
+        border-top-left-radius: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 4px 0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      div.development-tools-message .single {
+        padding-left: 7px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 14px;
+        margin-left: 15px;
+        text-indent: -5px;
+      }
+
+      div.development-tools-message .message.odd {
+        background-color: #fff5f1;
+      }
+
+      div.development-tools-message {
+        position: fixed;
+        left: 100%;
+        top: 100%;
+        width: 250px;
+        border-top-left-radius: 10px;
+        padding-bottom: 5px;
+        transform: translate(-100%, -100%);
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 100);
+        border: 1px solid #333;
+        border-bottom: 0;
+        border-right: 1px solid #ccc;
+      }
+    </style>
+<% end %>
