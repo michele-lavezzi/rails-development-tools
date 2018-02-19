@@ -1,5 +1,6 @@
 require 'rails_development_tools/engine'
 require 'deface'
+require 'js_cookie_rails'
 
 module RailsDevelopmentTools
   extend ActiveSupport::Concern
