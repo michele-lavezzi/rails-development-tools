@@ -8,8 +8,10 @@
     <td class='label'><span class='label'>action</span></td>
     <td class='value'><span class='value'><%= action_name %></span></td>
   </tr>
+
+  <% layout = controller.send(:_layout, ['']) %>
   <tr>
     <td class='label'><span class='label'>layout</span></td>
-    <td class='value'><span class='value'><%= controller.send('_layout', '') %></span></td>
+    <td class='value'><span class='value'><%= layout || 'application' %></span></td>
   </tr>
 </table>
