@@ -15,6 +15,9 @@
 <!-- style for panel -->
 <style>
   .development-tools-panel {
+    top:0;
+    font-family: Helvetica;
+    font-size: 13px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -36,6 +39,12 @@
     background-color: #333;
     text-align: center;
   }
+
+    .development-tools-panel label {
+      font-size: 13px;
+      font-weight: normal;
+      display: inline;
+    }
 </style>
 
 <!-- style for routing info -->
@@ -91,9 +100,10 @@
 <!-- style for partials -->
 <style>
   div#partials-container #title {
+    font-family: Helvetica;
     background-color: #333;
     color: white;
-
+    font-size: 13px;
     border-top-right-radius: 10px;
     margin-bottom: 5px;
     text-align: center;
@@ -101,6 +111,7 @@
   }
 
   div#partials-container .single-partial {
+    font-family: Helvetica;
     left: 20px;
     width: 100%;
     text-align: left;

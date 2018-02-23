@@ -3,6 +3,7 @@
 
     var $container = $("<div/>")
     $container.css('position','fixed');
+    $container.css('left','0');
 
     $container.attr('id','partials-container');
 
