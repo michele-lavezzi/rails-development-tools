@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.4"
   s.add_dependency 'deface'
+  s.add_dependency 'js_cookie_rails'
 end

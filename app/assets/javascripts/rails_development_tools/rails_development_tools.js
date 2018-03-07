@@ -1,5 +1,4 @@
-(function ($) {
-
+$(function() {
 
     var $container = $("<div/>")
     $container.css('position','fixed');
@@ -16,7 +15,6 @@
     var partials = [];
 
     $(".development-tools-partials-info").each(function( index ) {
-
         partial = $(this).attr('title');
         if (partials.includes(partial)){
             $(this).remove();
@@ -73,4 +71,4 @@
         $(this).html($circle);
     });
 
-})(jQuery);
+});
