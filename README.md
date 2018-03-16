@@ -53,7 +53,7 @@ end
 ### - application.html.erb
 To include the main panel to all of your pages add the following line. This helper load a partial that loads the javascript.
 ```ruby
-<%= rails_development_tools_panel %>
+<%= development_tools_panel %>
 ```
 
 ### - assets.rb
@@ -61,6 +61,11 @@ To make the javascripts available for loading include these lines:
 ```ruby
 rails_development_tools/rails_development_tools.js
 rails_development_tools/rails_development_tools_status.js
+```
+### - application.js
+Add the following line
+```ruby
+//= require js.cookie
 ```
 
 ## License
