@@ -11,7 +11,7 @@ The gem has 3 main feature: routing info, partials info and messages.
 Take a look of the 3 main features
 ![alt text](https://raw.githubusercontent.com/michele-lavezzi/rails-development-tools/master/docs/tools_0.png)
 
-ROUTING INFO
+### ROUTING INFO
 The routing panel shows the current action name, controller name and layout. This is helpful to quickly focus on the controller's action of the
 current page. Useful mainly in the case the RESTful rules are not fully applied and the controller/action couple is not easy guessing from the url
 ie. '/prices_computer' is routed to action 'search_by_category' in the 'product_controller'.
@@ -19,13 +19,13 @@ ie. '/prices_computer' is routed to action 'search_by_category' in the 'product_
 ![alt text](https://raw.githubusercontent.com/michele-lavezzi/rails-development-tools/master/docs/tools_3.png)
 
 
-PARTIALS INFO
+### PARTIALS INFO
 The partials info shows you the an overview of the partials file involved in the creation of the entire page.
 
 ![alt text](https://raw.githubusercontent.com/michele-lavezzi/rails-development-tools/master/docs/tools_1.png)
 ![alt text](https://raw.githubusercontent.com/michele-lavezzi/rails-development-tools/master/docs/tools_2.png)
 
-MESSAGES
+### MESSAGES
 This is used to avoid the need to open (ie. 'tail -f development.log') the .log file to see what's going on.
 You can set custom messages and see them directly on the screen.
 
